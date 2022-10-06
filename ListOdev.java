@@ -38,6 +38,7 @@ public class ListOdev extends JFrame {
      private JTextField textVize;
      private JTextField textField_1;
      private JTextField textField_2;
+     private JTextField textField_3;
     
 
 public static void main(String[] args) {
@@ -81,10 +82,10 @@ public ListOdev() {
 			public void actionPerformed(ActionEvent e) {
 		     
 				
-				
-				for(int i = 0; i < 4; i++)
+				//yazılan bütün öğrecilerin no'larına göre sıralamak için
+				for(int i = 0; i < count_add-1 ; i++)
 		        {
-		            for(int j = i+1; j < 5; j++)
+		            for(int j = i+1; j < count_add; j++)
 		            {
 		                if(ogr[j].no < ogr[i].no) {
 		                    gecici = ogr[i].no;
@@ -95,16 +96,10 @@ public ListOdev() {
 		        }
 				
 				for (int j = 0; j < 5; j++) { //Diziye atamak için
-		            System.out.println(ogr[j]); //Diziyi yazrımak için
-		           Ogrenci += j+1 + ". " + ogr[j].isim + " " + ogr[j].no + " "  + ogr[j].vize + "\n" ;//Ekrana yazrımak için
-		           
-
+		          //  System.out.println(ogr[j]); //Diziyi yazrımak için
+		           Ogrenci += ogr[j].no + ". " + ogr[j].isim + " "  + ogr[j].vize + "     "  ;//Ekrana yazrımak için
+		      
 		        }
-				
-
-				
-	
-			
 			}
 		});
 		ListeleBT.setBounds(10, 381, 89, 23);
@@ -127,15 +122,15 @@ public ListOdev() {
 		        istenenYer = no;
 
 		        
-		        
+		        //Ekran görselliği için artırdığımız ve azalttığımız değerler
 		        i++;
 		        kalan--;     
 		        count_add++;
 		     
-		        count_add_String =String.valueOf(count_add);
-		        System.out.println(count_add);
-
 		        
+		        count_add_String =String.valueOf(count_add); //count_add değişkenini string yapmak
+		        System.out.println(count_add); //kontrol için console da aktif yazı yazdırma
+  
 			}
 		});
 		AddBT.setBounds(10, 245, 89, 23);
@@ -144,7 +139,11 @@ public ListOdev() {
 		JButton DeleteBT = new JButton("Delete");
 		DeleteBT.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//Ekranda yazılı sayıyı alıp intiger a çevirmek
+				int slincek = Integer.parseInt(textField_3.getText()); 
 			
+				dizidenSil(ogr,slincek-1);
+				
 			}
 		});
 		DeleteBT.setBounds(10, 279, 89, 23);
@@ -153,12 +152,9 @@ public ListOdev() {
 		JButton KontrolBt = new JButton("Kontrol");
 		KontrolBt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//Ekranda yazıla nöğrenciler ve kaç kişi olduğunu yazmak için
 				textField_1.setText(Ogrenci);
-				textField_2.setText(count_add_String);
-			
-				
-	
-				
+				textField_2.setText(count_add_String);			
 			  }
 		});
 		KontrolBt.setBounds(10, 313, 89, 23);
@@ -216,6 +212,31 @@ public ListOdev() {
 		JLabel lbCount = new JLabel("Toplam Sayı");
 		lbCount.setBounds(264, 245, 102, 18);
 		contentPane.add(lbCount);
+		
+		textField_3 = new JTextField();
+		textField_3.setText("");
+		textField_3.setColumns(10);
+		textField_3.setBounds(109, 274, 73, 28);
+		contentPane.add(textField_3);
 		   
 	}
+	void dizidenSil(ListOdev_Ogrenci[] ogr2, int k) {
+		int i;
+		//Ekranda girilen değerin değerlerini null değer ile değiştirmek için
+			ogr2[k].isim = "";
+			ogr2[k].no = 0;
+			ogr2[k].vize = 0;
+	
+		
+		Ogrenci = " ";  //Ekrana yazılan texti sıfırlamak için
+		for (int j = 0; j < ogr.length; j++) {       //Ekrana tekrar yazdırmak için
+			System.out.println(ogr[j]);
+			
+			 Ogrenci += j+1 + ". " + ogr[j].isim + " "  + ogr[j].vize + " __ " ;
+	        }
+		
+		textField_1.setText(Ogrenci);
+
+
+ }
 }

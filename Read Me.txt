@@ -1,1 +1,3 @@
 Güz dönemei algoritma 1. lab dersi verilen ödevi eclips üzerinde yazılan kodlar
+
+Upgrade 2 = UI üzerinden silme işlemi eklendi 
