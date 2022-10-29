@@ -4,3 +4,4 @@ Upgrade 3 = 06.10 tarihi lab dersi yapılanlar
 Upgrade 4 = Sistem üzerinden verilen polinomu düzenli bir şekilde yazma ve girilen değer ile 
 polinom üzerinde işlem yapma ödevi
 Upgrade 5 = 13.10 lab dersi yazılan kodlar
+Up 6 = 27.10 lab dersi yazılan kodlar
