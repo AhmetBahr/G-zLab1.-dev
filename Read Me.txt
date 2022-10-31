@@ -5,3 +5,5 @@ Upgrade 4 = Sistem üzerinden verilen polinomu düzenli bir şekilde yazma ve gi
 polinom üzerinde işlem yapma ödevi
 Upgrade 5 = 13.10 lab dersi yazılan kodlar
 Up 6 = 27.10 lab dersi yazılan kodlar
+Up 7 = 4.hafta veri yapıları (Odev-2) infix-Postfix ödevi GUI ve Class sayfaları yapıldı
+  
