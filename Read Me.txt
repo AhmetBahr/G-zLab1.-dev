@@ -6,3 +6,4 @@ Push 5 = 13.10 lab dersi yazılan kodlar
 Push 6 = 27.10 lab dersi yazılan kodlar
 Push 7 = 4.hafta veri yapıları (Odev-2) infix-Postfix ödevi GUI ve Class sayfaları yapıldı
 Push 8 = 6.hafta veri yapıları stack ve queue kulanarak kelimelerin palindrom olup olmadığını kontrol etme 
+Push 9 = infix-Postfix ödevi ders sırasında hocanın verdiği quiz ile yapıldı 

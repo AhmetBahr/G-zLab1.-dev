@@ -1,11 +1,8 @@
-import java.util.Stack;
-
-
-
 public class Infix_postfix_Odev {
 
 	  public int PostfixSonuc(String s) {
-	    stack st = new stack(10);
+	    stack st = new stack(100);
+	    int toplam = 0;
 	    
 	    int x = 0, y = 0;
 	    char ch[] = s.toCharArray();
@@ -14,10 +11,12 @@ public class Infix_postfix_Odev {
 	    for(char c: ch) {
 	    	
 	      if(c >= '0' && c <= '9') {
+	    	  
 	        st.push((int)(c - '0'));
 	      } else {
 	        y = st.pop();
 	        x = st.pop();
+	        
 	        switch(c) {
 	          case '+':
 	            st.push(x+y);
@@ -36,6 +35,29 @@ public class Infix_postfix_Odev {
 	    }
 	    return st.pop();
 	  }
+	  
+	  public int toplam(String s) {
+		  stack st = new stack(100);
+		    int toplam = 0;
+		    
+		    int x = 0, y = 0;
+		    char ch[] = s.toCharArray();
+
+		    for(char c: ch) {
+		    	
+			   if(c >= '0' && c <= '9') {
+			    	 
+			    st.push((int)(c - '0'));
+			toplam += st.peek();
+			     }
+			      
+			   }
+		    
+		  return toplam;
+	  }
+	  
+//	h.yetis@firat.edu.tr
+	  
 	  
 	  public String PostfixGosterim(String s) {
 		stack st = new stack(100);
@@ -92,6 +114,7 @@ public class Infix_postfix_Odev {
 	    } 
 	  }
 	}
+
  class stack {
 
 	int maxBoyut;
@@ -104,7 +127,6 @@ public class Infix_postfix_Odev {
 		top = -1;
 		
 	}
-	
 	public void push(int i) {
 		top = top +1;
 		
