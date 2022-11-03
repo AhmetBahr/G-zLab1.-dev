@@ -1,9 +1,8 @@
 Güz dönemei algoritma 1. lab dersi verilen ödevi eclips üzerinde yazılan kodlar
-Upgrade 2 = UI üzerinden silme işlemi eklendi
-Upgrade 3 = 06.10 tarihi lab dersi yapılanlar 
-Upgrade 4 = Sistem üzerinden verilen polinomu düzenli bir şekilde yazma ve girilen değer ile 
-polinom üzerinde işlem yapma ödevi
-Upgrade 5 = 13.10 lab dersi yazılan kodlar
-Up 6 = 27.10 lab dersi yazılan kodlar
-Up 7 = 4.hafta veri yapıları (Odev-2) infix-Postfix ödevi GUI ve Class sayfaları yapıldı
-  
+Push 2 = UI üzerinden silme işlemi eklendi
+Push 3 = 06.10 tarihi lab dersi yapılanlar 
+Push 4 = Sistem üzerinden verilen polinomu düzenli bir şekilde yazma ve girilen değer ile polinom üzerinde işlem yapma ödevi
+Push 5 = 13.10 lab dersi yazılan kodlar
+Push 6 = 27.10 lab dersi yazılan kodlar
+Push 7 = 4.hafta veri yapıları (Odev-2) infix-Postfix ödevi GUI ve Class sayfaları yapıldı
+Push 8 = 6.hafta veri yapıları stack ve queue kulanarak kelimelerin palindrom olup olmadığını kontrol etme 
